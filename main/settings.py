@@ -25,7 +25,7 @@ SECRET_KEY = 'ce0r()3en$c75hyarcd335cts*oeya#or_@bhwri+p@vvun$xm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['emeupci.com', '206.189.127.108', 'localhost', '127.0.0.1', '46.101.181.65']
+ALLOWED_HOSTS = ['emeupci.com', '178.62.86.115', 'localhost', '127.0.0.1']
 
 
 # Application definition
