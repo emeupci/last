@@ -41,7 +41,7 @@
 
 .sidenav .closebtn {
     position: absolute;
-    top: 5px;
+    top: 0px;
     right: 25px;
     font-size: 24px;
     margin-left: 50px;
@@ -100,7 +100,7 @@
 
 .sidenav1 .closebtn1 {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 25px;
     font-size: 24px;
     margin-left: 50px;
