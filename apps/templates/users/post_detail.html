@@ -1,0 +1,60 @@
+{% extends 'shared/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="container p-5 mt-2">
+<div class="table-wrap mt-4">
+<table class="table table-hover pl-2 pr-2" style="font-size: 13px;">
+       <tbody>
+        <tr>
+          <th>Created by: </th>
+            <td>{{ post.author.first_name }}</td>
+        </tr>
+        <tr>
+          <th>Church Title: </th>
+            <td>{{ post.title }}</td>
+        </tr>
+        <tr>
+          <th>Country: </th>
+            <td>{{ post.country }}</td>
+        </tr>
+        <tr>
+          <th>City: </th>
+            <td>{{ post.city }}</td>
+        </tr>
+        <tr>
+          <th>Address: </th>
+            <td>{{ post.address }}</td>
+        </tr>
+        <tr>
+          <th>Email: </th>
+            <td>{{ post.email }}</td>
+        </tr>
+        <tr>
+          <th>Phone: </th>
+            <td>{{ post.phone }}</td>
+        </tr>
+        <tr>
+          <th>Website: </th>
+            <td>{{ post.website }}</td>
+        </tr>
+        <tr>
+          <th>Date created: </th>
+            <td>{{ post.date_posted|date:"F d, Y" }}</td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
+<div class="container row mt-2 ml-4">
+
+{% if post.author == user %}
+  <a style="border-radius: 0; width: 100px; padding-left: 5px;" class="btn btn-secondary btn-block ml-5 mt-1 mb-1" href="{% url 'users:post-update' object.pk %}">Update</a>
+    <a style="border-radius: 0; width: 100px; padding-left: 5px;" class="btn btn-danger btn-block ml-5 mt-1 mb-1" href="{% url 'users:post-delete' object.pk %}">Delete</a>
+{% endif %}
+</div>
+
+</div>
+
+{% endblock %}

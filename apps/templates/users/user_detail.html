@@ -1,0 +1,83 @@
+{% extends 'shared/base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<br>
+<br>
+<div class="container mt-5 ml-5">
+  <div>
+    {% for messages in messages %}
+    <p class="alert alert-success">{{messages}}</p>
+    {% endfor %}
+  </div>
+  <br>
+  <br>
+  <div class="row">
+      <div class="media wrapper-img">
+        <div class="account-img-div">
+          <img class="rounded-circle account-img" style="width: 220px; height: 230px;" src="{{ user.profile.image.url }}">
+        </div>
+      </div>
+      <div class="media-body pl-4">
+        <h4 class="account-heading"> Profile Information   </h4>
+        <p class="text-secondary"> First name: {{ user.first_name }} </p>
+        <p class="text-secondary"> Last name: {{ user.last_name }}   </p>
+        <p class="text-secondary"> Email: {{ user.email }}           </p>
+        <p class="text-secondary"> Country: {{ user.country }}       </p>
+        <p class="text-secondary"> City: {{ user.city }}             </p>
+        <p class="text-secondary"> username: {{ user.username }}     </p>
+      </div>
+  </div>
+
+      <div class="form-container mt-5">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <fieldset class="form-group" style="width: 320px;">
+          <legend class="border-bottom mb-4">Update Profile Info</legend>
+          {{ uform|crispy }}
+          {{ pform|crispy }}
+        </fieldset>
+
+        <div class="form-group mt-4">
+          <button style="border-radius: 0; width: 200px; padding-left: 4px;" class="btn btn-info btn-block" type="submit">Update</button>
+        </div>
+      </form>
+     </div>
+
+  </div>
+
+  <div class="col-sm-6"">
+    <div class="media">
+      <div class="media-body pl-4" style="background-color: white; width: 500px; padding-left: 14px; margin-right: 1px;">
+        <h4 class="account-heading mb-4">
+          {% if user.country %}
+            <span class="text-muted small text-center">Churches added by <b>{{ user.first_name }} {{ user.last_name }}</b></span>
+          {% endif %}
+        </h4>
+
+        {% for post in posts %}
+
+        <div class="card small d-flex col-lg-8 col-xs-12" style="background-color: #f2f3f4;">
+            <div class="card-body" style="card-text: break-word">
+            <p class="card-text font-weight-bold mb-3 text-uppercase">Church title: <a href="{% url 'users:post-detail' post.pk %}">{{ post.title }}</a></p>
+            <p class="card-text">Country: {{post.country}}.</p>
+            <p class="card-text">City: <a href="{% url 'users:address' post.pk %}">{{post.city}}.</a></p>
+            <p class="card-text">Address: {{post.address}}.</p>
+            <p class="card-text">Email: {{post.email}}.</p>
+            <p class="card-text">Phone: {{post.phone}}.</p>
+            <p class="card-text">Website: <a href="{{post.website}}">{{post.website}}</a></p>
+            <p class="card-text text-muted">Added by: <a href="{% url 'users:cabinet' %}">{{post.author.first_name}} {{post.author.last_name}}</a> <br> on {{post.date_posted|date:"F d, Y"}}.</p>
+            </div>
+        </div>
+
+        {% empty %}
+
+        <div class="well well-lg bordered" style="background-color: #F7EDED; padding: 200px; ">
+
+        <h2 class="text-center small">You don't have any churches yet. <br>Please click <a href="{% url 'users:post-create' %}">"Add Church"</a> to create one. </h2>
+
+        </div>
+        {% endfor %}
+
+{% endblock %}
