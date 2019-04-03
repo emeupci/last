@@ -1,124 +1,121 @@
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 40px; /* Place content 0px from the top */
-    transition: 0s; /* 0 second transition effect to slide in the sidenav */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 40px; /* Place content 0px from the top */
+  transition: 0s; /* 0 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0s;
-    padding-top: 0px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0s;
+  padding-top: 0px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 22px;
-    color: #818181;
-    display: block;
-    transition: 0s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+  transition: 0s;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 40px;
-    right: 25px;
-    font-size: 24px;
-    margin-left: 50px;
-
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  font-size: 24px;
+  margin-left: 50px;
 }
 
 .sidenav p {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 22px;
-    color: #818181;
-    display: block;
-    transition: 0s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+  transition: 0s;
 }
 
 /* The side subnavigation menu for dates */
 .sidenav1 {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px; /* Place content 0px from the top */
-    transition: 0s; /* 0 second transition effect to slide in the sidenav */
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 0px; /* Place content 0px from the top */
+  transition: 0s; /* 0 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 .sidenav1 {
-    height: 100%;
-    width: 0;
-    position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0s;
-    padding-top: 0px;
+  height: 100%;
+  width: 0;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0s;
+  padding-top: 0px;
 }
 
 .sidenav1 a {
-    padding: 8px 8px 8px 0px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0s;
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0s;
 }
 
 .sidenav1 a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidenav1 .closebtn1 {
-    position: absolute;
-    top: 40px;
-    right: 25px;
-    font-size: 24px;
-    margin-left: 50px;
-
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  font-size: 24px;
+  margin-left: 50px;
 }
 
 .sidenav1 p {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #818181;
-    display: block;
-    transition: 0s;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0s;
 }
 
-
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -126,13 +123,14 @@
   cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover,
+.dropbtn:focus {
   background-color: #3e8e41;
 }
 
 #myInput {
   border-box: box-sizing;
-  background-image: url('searchicon.png');
+  background-image: url("searchicon.png");
   background-position: 14px 12px;
   background-repeat: no-repeat;
   font-size: 16px;
@@ -141,7 +139,9 @@
   border-bottom: 1px solid #ddd;
 }
 
-#myInput:focus {outline: 3px solid #ddd;}
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
 
 .dropdown {
   position: relative;
@@ -165,9 +165,13 @@
   display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+  background-color: #ddd;
+}
 
-.show {display: block;}
+.show {
+  display: block;
+}
 
 /* .social-buttons {
   display: flex;
@@ -176,11 +180,11 @@
 } */
 
 .btn-wrapper {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* @media(min-width: 768px){ */
@@ -189,19 +193,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  }
-
+}
 
 .social1 a {
   border: 1px #ccc solid;
   padding: 20px;
   margin: 20px;
-
 }
 
 .social-icon1 {
-  flex:1;
-
+  flex: 1;
 }
 
 .card {
@@ -233,39 +234,57 @@
 }
 
 .media {
-  flex:1;
+  flex: 1;
   align-items: center;
   margin-bottom: 10px;
-
-
 }
 
 .media-body {
-  flex:1;
+  flex: 1;
   margin-top: 10px;
-
 }
 
 .wrapper-img {
   text-align: center;
 }
 
-
 .headerimage {
-    position: relative;
-    background: url(../../users/img/map.png) center no-repeat; /* <-- path to your map image here*/
-    background-size: cover;
-    width: cover;
-    height: 500px;
-
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: url(../../users/img/map.png) center no-repeat; /* <-- path to your map image here*/
+  background-size: cover;
+  width: cover;
+  height: 500px;
 }
-.child { /*This class styles your button or your buttons container*/
-    position: absolute;
-    margin: 0 auto;
-    top: 200px;
-    bottom: 0px;
-    right: 40%;
-    left: 35%;
-    width: cover;
-    /*height: 60px;*/
+.child1 {
+  /*This class styles your button or your buttons container*/
+  flex: 1;
+  margin: 0 auto;
+  top: 200px;
+  bottom: 0px;
+  width: cover;
+  align-items: center;
+  /*height: 60px;*/
+}
+
+.child2 {
+  /*This class styles your button or your buttons container*/
+  flex: 1;
+  margin: 0 auto;
+  top: 200px;
+  bottom: 0px;
+  width: cover;
+  align-items: center;
+  /*height: 60px;*/
+}
+.child3 {
+  /*This class styles your button or your buttons container*/
+  flex: 1;
+  margin: 0 auto;
+  top: 200px;
+  bottom: 0px;
+  width: cover;
+  align-items: center;
+  /*height: 60px;*/
 }
