@@ -111,7 +111,7 @@
                        </button>
                      </div>
                   <div id="myDropdown" class="dropdown-content">
-                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <input type="text" style="width: 250px;" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                         {% for country in country %}
                           <a href="{% url 'users:cities' country.pk %}">{{country.country}}</a>
                         {% endfor %}
