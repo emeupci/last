@@ -41,7 +41,7 @@
 
 .sidenav .closebtn {
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 25px;
   font-size: 24px;
   margin-left: 50px;
@@ -74,7 +74,7 @@
 .sidenav1 {
   height: 100%;
   width: 0;
-  position: relative;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
@@ -99,7 +99,7 @@
 
 .sidenav1 .closebtn1 {
   position: absolute;
-  top: 40px;
+  top: 0;
   right: 25px;
   font-size: 24px;
   margin-left: 50px;
@@ -174,9 +174,9 @@
 }
 
 /* .social-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 } */
 
 .btn-wrapper {
