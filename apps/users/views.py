@@ -105,7 +105,7 @@ def blog(request):
 def countries(request):
 
     user = User.objects.all()
-    country = Post.objects.all().order_by('country').distinct('country')
+    country = Post.objects.all().order_by('country')
 
     context = {
         'posts': country,
@@ -118,7 +118,7 @@ def countries(request):
 
 def cities(request, pk):
     country = Post.objects.get(id=pk).country
-    cities = Post.objects.filter(country=country).distinct('city')
+    cities = Post.objects.filter(country=country)
     author = Post.objects.get(id=pk).author
     access_challenge_country = Country.objects.filter(access_challenge = True)
 
@@ -150,8 +150,8 @@ def address(request, pk):
 def home(request):
         user = User.objects.all()
         cname = request.POST.get('dropdown1')
-        city = Post.objects.all().distinct('city')
-        country = Post.objects.all().distinct('country').order_by('country_id')
+        city = Post.objects.all()
+        country = Post.objects.all().order_by('country_id')
 
 
         context = {

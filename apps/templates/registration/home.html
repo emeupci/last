@@ -4,24 +4,26 @@
 {% block content %}
 
 <!-- Header -->
-    <header class="masthead text-center text-white d-flex">
+<div align="center">
+    <header class="masthead text-center text-white d-flex" style="max-width:83.3333%;">
       <div class="container my-auto">
         <div class="row">
-          <div class="col-lg-10 mx-auto">
-           <span style="font-size: 50px; opacity: 0.7; background-color: white"><b class="mr-3 ml-3" style="color: black">EME</b></span>
-           <span style="font-size: 50px; opacity: 0.7; background-color: black"><b class="mr-3 ml-3">Region</b></span>
+          <div class="col-lg-12 mx-auto">
+           <span style="font-size: 42px; opacity: 0.7; background-color: black; "><b class="mr-3 ml-3" style="color: white"><font face="Verdana">EME</font></b></span>
+           <span style="font-size: 42px; opacity: 0.7; background-color: white"><b class="mr-3 ml-3" style="color: black"><font face="Verdana">Region</font></b></span>
           </div>
           </div>
       </div>
     </header>
-
+</div>
     <section class="border-bottom" id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 mx-auto text-left">
-            <h2 class="section-heading">Europe & the Middle East</h2><br>
-            <p class="mb-4">The Europe and Middle East Region spans across the EurAsian Continent; from picturesque streets of Lisbon in the west to the breathtaking wilderness of Kamchatka in Russia's far east. The divirsity of landscapes is eclipsed only by the diversity of people groups. There is one unifying truth; everyone, everywhere has need of a Savior. This the mission of the Europe and Middle East United Pentecostal Church: to share the good news of a powerful Savior.
-              <br><br><div class=" col-sm-12 mx-auto text-right">Capturing the hearts of mankind and Cities for Christ.</div></p>
+            <h3 class="section-heading">Europe & the Middle East</h3>
+            <p class="mb-4"><p>The Europe and Middle East Region spans the EurAsian Continent; from the picturesque streets of Lisbon in the west to the breathtaking wilderness of Kamchatka in Russia's far east. The divirsity of landscapes is eclipsed only by the diversity of people groups. There is one unifying truth; everyone, everywhere has need of a Savior. This is the mission of the Europe and Middle East United Pentecostal Church: to share the good news of a powerful Savior.
+            <br><br>
+            <div class=" col-sm-12 mx-auto text-right">- Capturing the hearts of mankind and Cities for Christ.</div></p></p>
           </div>
         </div>
       </div>
@@ -32,7 +34,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading">Areas</h2>
+            <h3 class="section-heading">Areas</h3>
           </div>
         </div>
       </div>
@@ -41,25 +43,25 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <h3 class="mb-3">Northern Europe</h3>
+              <h5 class="mb-3">Northern Europe</h5>
               <img src="{% static 'users/img/iceland3edit.jpg' %}" alt="Northern Europe" style="width:100%">
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <h3 class="mb-3">Western Europe</h3>
+              <h5 class="mb-3">Western Europe</h5>
               <img src="{% static 'users/img/franceedit.jpg' %}" alt="Western Europe" style="width:100%">
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <h3 class="mb-3">Eastern Europe</h3>
+              <h5 class="mb-3">Eastern Europe</h5>
               <img src="{% static 'users/img/hungaryedit.jpg' %}" alt="Eastern Europe" style="width:100%">
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
-              <h3 class="mb-3">CIS & Baltic States</h3>
+              <h5 class="mb-3">CIS & Baltic States</h5>
               <img src="{% static 'users/img/latviaedit.jpg' %}" alt="CIS" style="width:100%">
             </div>
           </div>
@@ -87,11 +89,11 @@
       </div>
     </section>
 
-    <section class="border-bottom p-5" id="locate">
+    <section class="border-bottom" id="locate">
       <div class="container">
               <div class="row">
                 <div class="col-lg-12 mx-auto text-left">
-                  <h2 class="section-heading">Locate a Church!</h2>
+                  <h3 class="section-heading">Locate a Church!</h3>
                   <br>
                   <p class="mb-5">There are fantastic, Spirit lead, Holy Ghost filled churches all across the EME Region.  Find one near you! </p>
                 </div>
@@ -111,7 +113,7 @@
                        </button>
                      </div>
                   <div id="myDropdown" class="dropdown-content">
-                        <input type="text" style="width: 250px;" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                        <input type="text" style="width: 238px;" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
                         {% for country in country %}
                           <a href="{% url 'users:cities' country.pk %}">{{country.country}}</a>
                         {% endfor %}
@@ -128,11 +130,11 @@
              <div class="container">
                <div class="row">
                  <div class="col-lg-12 text-left">
-                   <h2 class="section-heading">Ministries</h2>
+                   <h3 class="section-heading">Ministries</h3>
                  </div>
                </div>
              </div>
-             <div class="container border-right">
+             <div class="container">
                <div class="row">
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
@@ -154,7 +156,7 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/Evangelism.png' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/Evangelism.png' %}" alt="campus" style="width:20%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Evangelism</h3>
                       <p class="text-left text-muted">You are a Soul Winner</p>
                       <p class="text-left mt-4">Europe has 831,400,000 souls that need Christ. With the EU opening up to people of all ethnic, cultural & religious backgrounds, there is no greater time than right now to “Enter the Harvest!</p>
@@ -163,7 +165,7 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/Men.png' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/Men.png' %}" alt="campus" style="width:40%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Men</h3>
                       <p class="text-left text-muted">Ministry specific for Men</p>
                       <p style="padding-bottom: 95px;" class="text-left mt-4">Fellowship, Camaraderie, Friendship, and Encouragement!</p>
@@ -172,7 +174,7 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/military.png' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/military.png' %}" alt="campus" style="width:22%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Military</h3>
                       <p class="text-left text-muted">Serving those who Serve</p>
                       <p style="padding-bottom: 95px;" class="text-left mt-4">Points of connection and fellowship for those serving abroad.</p>
@@ -182,7 +184,7 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/ladies.jpg' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/ladies.jpg' %}" alt="campus" style="width:30%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Ladies</h3>
                       <p class="text-left text-muted">Ministry specific to Ladies</p>
                       <p style="padding-bottom: 120px;" class="text-left mt-4">Powerful ministry by Ladies for Ladies!</p>
@@ -192,7 +194,7 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/literature.png' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/literature.png' %}" alt="campus" style="width:30%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Literature</h3>
                       <p class="text-left text-muted">Getting the word out</p>
                       <p style="padding-bottom: 0px;" class="text-left mt-4">Just as we are diverse geographically, ethnically, and culturally we are also diverse linguistically. This ministry is devoted to an ever expanding repository of information in various languages.</p>
@@ -202,21 +204,24 @@
                  </div>
                  <div class="col-lg-3 col-md-12 text-center">
                    <div class="service-box mt-5 mx-auto">
-                     <img src="{% static 'users/img/youth.png' %}" alt="campus" style="width:25%" align="right" class="w3-margin-right">
+                     <img src="{% static 'users/img/youth.png' %}" alt="campus" style="width:23%" align="right" class="w3-margin-right">
                       <h3 class="mb-3 text-left">Youth</h3>
                       <p class="text-left text-muted">For those under 25</p>
-                      <p style="padding-bottom: 24px;" class="text-left mt-4">This world does not need more young people to sell out... this generation needs more like Joshua, Esther, Caleb, and Ruth! EME Youth Ministry is devoted to empowering this generation.</p>
+                      <p style="padding-bottom: 48px;" class="text-left mt-4">This world does not need more young people to sell out... this generation needs more like Joshua, Esther, Caleb, and Ruth! EME Youth Ministry is devoted to empowering this generation.</p>
                       <p><a href="http://www.emeyouth.com" class="btn btn-info btn-block" style="background-color: #ccc8c7; border-radius: 0;" target="_blank">More Information</a></p>
                    </div>
                  </div>
            </section>
-           <section class="h-100" id="contact">
+
+           <section class="border-bottom" id="contact">
              <div class="container">
                <div class="row">
                  <div class="col-lg-12 mx-auto text-left">
-                   <h2 class="section-heading text-center"><strong class="text-uppercase position-sticky">Contact</strong></h2><br>
+                   <h3 class="section-heading">Connect</h3>
+                    <br>
                      <br>
                      {% include 'users/social_buttons.html' %}
+                        <br><br><br><br><br><br><br><br><br><br>
                  </div>
                </div>
              </div>

@@ -13,7 +13,7 @@
     <title>EME</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'users/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'users/vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'users//css/stylesheet.css' %}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
@@ -38,46 +38,46 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav1">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav1">
+      <div class="container-fluid">
         <a href="https://www.upci.org/home" target="_blank"><img align="left" src="{% static 'users/img/newheader1.png' %}" alt="UPCI" width="100" height="35"></a>&nbsp;
-        &nbsp;<a href="{% url 'users:home' %}#page-top" style="font-size: 17px; color: black;" class="w3-bar-item w3-button"><b>EME</b> Region</a>
+        &nbsp;<a href="{% url 'users:home' %}#page-top" style="font-size: 16px; color: black;"><h6><span class="align-middle"><b>EME</b> Region</a></span></h6>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="collapse navbar-collapse" style="cursor: pointer" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#about">About</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#about"><h6>About</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#areas">Areas</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#areas"><h6>Areas</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#locate">Church Locator</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#locate"><h6>Church Locator</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#ministries">Ministries</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#ministries"><h6>Ministries</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#contact">Contact</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:home' %}#contact"><h6>Connect</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" onclick="openNav()">Events</a>
+                  <a class="nav-link js-scroll-trigger" onclick="openNav()"><h6>Events</h6></a>
                 </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:cabinet' %}">Profile</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:cabinet' %}"><h6>Profile</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Log Out</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}"><h6>Log Out</h6></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'users:post-create' %}">Add Church</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'users:post-create' %}"><h6>Add Church</h6></a>
                 </li>
               {% else %}
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="{% url 'login' %}">Log In</a>
+                  <a class="nav-link js-scroll-trigger" href="{% url 'login' %}"><h6>Log In</h6></a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link js-scroll-trigger" href="{% url 'users:register' %}">Register</a>
@@ -95,15 +95,11 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
       <a href="{% static 'users/css/YearCalendar.pdf' %}" target="_blank">Full Year</a>
       <a href="#" class="" onclick="openCal()">Calendar View</a>
-       <a href="{% static 'users/css/future.pdf' %}" target="_blank">Future</a><br><br>
-       <span class="w3-border-top w3-border-light-grey w3-left mt-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </span>
-    <br>
-    <br>
+       <a href="{% static 'users/css/future.pdf' %}" target="_blank">Future</a>
+ <u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>
+<br><br>
       <a href="#" class="" onclick="openJan()">January</a>
       <a href="#" class="" onclick="openFeb()">February</a>
       <a href="#" class="" onclick="openMar()">March</a>
@@ -115,8 +111,7 @@
       <a href="#" class="" onclick="openSep()">September</a>
       <a href="#" class="" onclick="openOct()">October</a>
       <a href="#" class="" onclick="openNov()">November</a>
-      <a href="#" class="" onclick="openDec()">December</a><br>
-
+      <a href="#" class="" onclick="openDec()">December</a>
       <br>
     </div>
     <!-- Header for January -->
@@ -265,7 +260,7 @@
 <script src="{% static 'users/vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
 
 <!-- Custom scripts for this template -->
-<script src="{% static 'users/js/creative.min.js' %}"></script>
+<script src="{% static 'users/js/creative.js' %}"></script>
 
 <script>
 function openNav() {
